@@ -1,4 +1,5 @@
 import React from "react";
+import Greetings from "./Greetings";
 
 class Student {
   fullName: string;
@@ -18,6 +19,10 @@ interface Person {
 
 function App({ firstName, lastName }: Person) {
   let user = new Student("Lee", "jae", "min");
+  const onClick = (name: string) => {
+    console.log(`${name} says hello`);
+  };
+
   return (
     <>
       <div>
@@ -26,6 +31,8 @@ function App({ firstName, lastName }: Person) {
       <div>
         {user.fullName} {user.firstName}
       </div>
+      <div>-------------------------------------------------------------</div>
+      <Greetings name="Ya" mark="!" onClick={onClick} />
     </>
   );
 }
