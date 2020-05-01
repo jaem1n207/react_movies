@@ -46,6 +46,7 @@ const MovieDateForm = ({ onSubmitTargetDate }: GetMovieTodayInfoFormProps) => {
         onChange={changeDate}
         value={date}
         placeholder="20200501"
+        autoComplete="off"
         ref={inputRef}
       />
       <button type="submit">조회</button>
