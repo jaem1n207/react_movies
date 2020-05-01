@@ -1,9 +1,10 @@
 import React from "react";
+import Test from "./components/MovieDateForm";
 
 function App() {
   return (
     <>
-      <div>hello</div>
+      <Test />
     </>
   );
 }
