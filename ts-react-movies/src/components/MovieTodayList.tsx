@@ -1,5 +1,4 @@
 import React from "react";
-import MovieTodayInfo from "./MovieTodayInfo";
 
 type MovieListInfo = {
   rank: string; // 순위
@@ -31,11 +30,7 @@ const MovieTodayList = ({
   audiAcc,
   movieCd,
 }: MovieListInfo) => {
-  return (
-    <>
-      <MovieTodayInfo rank={m.rank} movieNm={m.movieNm} />
-    </>
-  );
+  return <></>;
 };
 
 export default MovieTodayList;

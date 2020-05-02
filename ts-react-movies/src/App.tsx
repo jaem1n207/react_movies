@@ -1,10 +1,10 @@
 import React from "react";
-import Test from "./components/MovieDateForm";
+import MovieTodayLoader from "./containers/MovieTodayLoader";
 
 function App() {
   return (
     <>
-      <Test />
+      <MovieTodayLoader />
     </>
   );
 }
