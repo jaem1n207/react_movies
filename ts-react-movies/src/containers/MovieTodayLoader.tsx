@@ -18,7 +18,18 @@ const MovieTodayLoader = () => {
   const onSubmitTargetDate = (targetDate: string) => {
     dispatch(getMovieTodayInfoAsync.request(targetDate));
   };
-  console.log(data);
+  console.log(
+    data?.dailyBoxOfficeList.map((movie) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      <MovieTodayInfo
+        rank={movie.rank}
+        movieNm={movie.movieNm}
+        rankInten={movie.rankInten}
+        rankOldAndNew={movie.rankOldAndNew}
+        openDt={movie.openDt}
+      />;
+    })
+  );
 
   return (
     <>
