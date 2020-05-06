@@ -8,6 +8,6 @@ export type MovieTodayState = {
   TodayInfo: {
     loading: boolean;
     error: Error | null;
-    data: MovietodayInfo | null;
+    dailyBoxOfficeList: [];
   };
 };
