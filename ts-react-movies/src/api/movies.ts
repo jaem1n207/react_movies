@@ -5,7 +5,10 @@ export async function getMovieToday(targetDate: string) {
     `http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${process.env.REACT_APP_MOVIE_API_KEY}&targetDt=${targetDate}`
   );
   console.log(response.data);
-  return response.data;
+  var movies = response.data.dailyBoxOfficeList;
+  console.log(movies);
+
+  return movies;
 }
 
 export interface MovietodayInfo {

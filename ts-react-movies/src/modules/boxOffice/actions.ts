@@ -1,5 +1,5 @@
 import { createAsyncAction } from "typesafe-actions";
-import { MovietodayInfo } from "../../api/movies";
+import { MovietodayInfo, DailyBoxOfficeList } from "../../api/movies";
 import { AxiosError } from "axios";
 
 export const GET_MOVIE_TODAY_INFO = "boxOffice/GET_MOVIE_INFO";
@@ -12,4 +12,4 @@ export const getMovieTodayInfoAsync = createAsyncAction(
   GET_MOVIE_TODAY_INFO,
   GET_MOVIE_TODAY_INFO_SUCCESS,
   GET_MOVIE_TODAY_INFO_ERROR
-)<string, MovietodayInfo, AxiosError>();
+)<string, DailyBoxOfficeList, AxiosError>();

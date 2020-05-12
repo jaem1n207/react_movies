@@ -10,7 +10,7 @@ const initialState: MovieTodayState = {
   TodayInfo: {
     loading: false,
     error: null,
-    data: null,
+    dailyBoxOfficeList[]: null,
   },
 };
 
@@ -22,7 +22,7 @@ const MovieInfo = createReducer<MovieTodayState, MovieTodayAction>(
       TodayInfo: {
         loading: true,
         error: null,
-        data: null,
+        data: action.payload,
       },
     }),
     [GET_MOVIE_TODAY_INFO_SUCCESS]: (state, action) => ({
