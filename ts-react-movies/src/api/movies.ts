@@ -1,4 +1,4 @@
-import axios from "axios";
+/* import axios from "axios";
 
 export async function getMovieToday(targetDate: string) {
   const response = await axios.get<MovietodayInfo>(
@@ -56,3 +56,4 @@ export interface MovieListInfo {
   audiAcc?: string; // 누적관객수
   movieCd?: string; // 영화코드 -> 영화상세정보를 위해 필요
 }
+ */
