@@ -1,8 +1,12 @@
-import { combineReducers } from "redux";
-import dailyBoxOffice from "./dailyBoxOffice";
+/* import { combineReducers } from "redux";
 
-export default combineReducers({
-  dailyBoxOffice,
+const reducers = combineReducers({
+  boxoffice,
+  movie,
+  people,
 });
 
-export type RootState = {};
+export default reducers;
+
+export interface RootState {}
+ */
