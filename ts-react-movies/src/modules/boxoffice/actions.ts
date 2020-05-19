@@ -1,14 +1,14 @@
-import { BoxOfficeState, Action, ObjectType } from "./types";
+import { BoxOfficeState } from "./types";
 import { Dispatch } from "redux";
 import * as api from "../../api/boxoffice";
 
-const GET_DAILY_REQUEST = "boxoffice/GET_DAILY_REQUEST";
-const GET_DAILY_SUCCESS = "boxoffice/GET_DAILY_SUCCESS";
-const GET_DAILY_FAIL = "boxoffice/GET_DAILY_FAIL";
+export const GET_DAILY_REQUEST = "boxoffice/GET_DAILY_REQUEST";
+export const GET_DAILY_SUCCESS = "boxoffice/GET_DAILY_SUCCESS";
+export const GET_DAILY_FAIL = "boxoffice/GET_DAILY_FAIL";
 
-const GET_WEEKLY_REQUEST = "boxoffice/GET_WEEKLY_REQUEST";
-const GET_WEEKLY_SUCCESS = "GET_WEEKLY_SUCCESS";
-const GET_WEEKLY_FAIL = "GET_WEEKLY_FAIL";
+export const GET_WEEKLY_REQUEST = "boxoffice/GET_WEEKLY_REQUEST";
+export const GET_WEEKLY_SUCCESS = "GET_WEEKLY_SUCCESS";
+export const GET_WEEKLY_FAIL = "GET_WEEKLY_FAIL";
 
 export const getDailyRequest = (payload: BoxOfficeState) => ({
   type: GET_DAILY_REQUEST,

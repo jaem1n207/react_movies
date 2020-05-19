@@ -1,12 +1,13 @@
-/* import { combineReducers } from "redux";
+import { combineReducers } from "redux";
+
+import boxoffice, { BoxOfficeState } from "./boxoffice";
 
 const reducers = combineReducers({
   boxoffice,
-  movie,
-  people,
 });
 
 export default reducers;
 
-export interface RootState {}
- */
+export interface RootState {
+  boxoffice: BoxOfficeState;
+}
