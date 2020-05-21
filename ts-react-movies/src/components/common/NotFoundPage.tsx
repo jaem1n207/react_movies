@@ -9,7 +9,7 @@ const Content = styled.div`
 `;
 
 const NotFoundPage: React.SFC = (props) => {
-  return <Content>검색결과가 없습니다.</Content>;
+  return <Content>검색결과를 찾지 못했습니다!</Content>;
 };
 
 export default NotFoundPage;

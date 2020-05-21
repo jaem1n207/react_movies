@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
       body {
               padding: 0;
               margin: 0;
+              background-color: #424242;
             }
           * {
               box-sizing: border-box;
