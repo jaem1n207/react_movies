@@ -1,28 +1,12 @@
 import React from "react";
-import MovieTodayLoader from "./containers/MovieTodayLoader";
+import LoadingPage from "./components/common/LoadingPage";
+import Navigator from "./components/common/Navigator";
 
-import { createGlobalStyle } from "styled-components";
-import { Provider } from "react-redux";
-import configureStore from "./store/configureStore";
-const store = configureStore();
-
-const GlobalStyle = createGlobalStyle`
-      body {
-              padding: 0;
-              margin: 0;
-              background-color: #424242;
-            }
-          * {
-              box-sizing: border-box;
-            }
-`;
+/* 
+  movie name color: E71D36(빨강)
+*/
 
 function Root() {
-  return (
-    <Provider store={store}>
-      <GlobalStyle />
-      <MovieTodayLoader />
-    </Provider>
-  );
+  return <Navigator />;
 }
 export default Root;
