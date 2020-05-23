@@ -12,6 +12,7 @@ const NavItem = styled.nav`
     display: flex;
     justify-content: space-between;
     width: 40rem;
+    margin-top: 2rem;
     color: #fff;
     font-size: 1.4rem;
     font-weight: bold;

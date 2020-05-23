@@ -41,7 +41,7 @@ export const getDaily = (today: string) => {
     try {
       dispatch(getWeeklyRequest({ loading: true }));
 
-      const result = await api.getWeekly(today);
+      const result = await api.getDaily(today);
       const daily = result.data.boxofficeResult.dailyBoxOfficeList;
 
       dispatch(getDailySuccess({ loading: false, daily }));
