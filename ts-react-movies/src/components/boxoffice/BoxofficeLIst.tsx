@@ -24,12 +24,7 @@ const Rank = styled.span`
   color: ${(props: RankProps) => (props.type === "up" ? "#f1404b" : "#03a6ff")};
 `;
 
-const BoxofficeLIst: React.FC<BoxofficeListProps> = ({ type, boxoffice }) => {
-  const allMovie[] =[];
-  const allAUdi = boxoffice.map(m => {
-    
-  })
-
+const BoxofficeList: React.FC<BoxofficeListProps> = ({ type, boxoffice }) => {
   return (
     <div className="Boxoffice">
       <div className="ListTitle">
@@ -102,4 +97,4 @@ const MovieComponent = (props: MovieComponent) => {
   );
 };
 
-export default BoxofficeLIst;
+export default BoxofficeList;

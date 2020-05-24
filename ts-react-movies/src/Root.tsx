@@ -1,5 +1,4 @@
 import React from "react";
-import LoadingPage from "./components/common/LoadingPage";
 import Navigator from "./components/common/Navigator";
 
 /* 
