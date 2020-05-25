@@ -15,7 +15,7 @@ interface LoadingProps {}
 const LoadingPage: React.FC<LoadingProps> = (props) => {
   return (
     <Loading>
-      <BeatLoader loading={true} margin={4} size={30} color={"#aaf0d1"} />
+      <BeatLoader loading={true} margin={4} size={30} color={"#4B0082"} />
     </Loading>
   );
 };

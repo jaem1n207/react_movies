@@ -4,7 +4,7 @@ const API_KEY = `key=${process.env.REACT_APP_MOVIE_API_KEY}`;
 
 export const getMovieList = (movieNm: string) => {
   return defaultApi.get(
-    `movie/searchMovieList.json?key=${API_KEY}&movieNm=${movieNm}`
+    `movie/searchMovieList.json?${API_KEY}&movieNm=${movieNm}`
   );
 };
 

@@ -26,9 +26,9 @@ const BoxofficeListContainer: React.FC<BoxofficeListContainerProps> = ({
 }) => {
   useEffect(() => {
     type === "daily"
-      ? getDaily(format(subDays(new Date(), 1), "YYYYMMDD"))
-      : getWeekly(format(subDays(new Date(), 7), "YYYYMMDD"));
-  }, [type]);
+      ? getDaily(format(subDays(new Date(), 1), "yyyyMMdd"))
+      : getWeekly(format(subDays(new Date(), 7), "yyyyMMdd"));
+  }, [getDaily, getWeekly, type]);
 
   return (
     <>
@@ -45,7 +45,7 @@ const BoxofficeListContainer: React.FC<BoxofficeListContainerProps> = ({
 };
 
 export default connect(
-  (state: RootState, props) => ({
+  (state: RootState) => ({
     loading: state.boxoffice.loading,
     daily: state.boxoffice.daily,
     weekly: state.boxoffice.weekly,

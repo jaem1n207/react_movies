@@ -32,14 +32,13 @@ const NavItem = styled.nav`
   }
 `;
 
-const Navigator: React.FC = (props) => {
+interface NavigatorProps {}
+const Navigator: React.FC<NavigatorProps> = (props) => {
   return (
     <NavItem>
       <ul>
         <li>
-          <NavLink exact to="/">
-            메인
-          </NavLink>
+          <NavLink to="/">메인</NavLink>
         </li>
         <li>
           <NavLink to="/boxoffice">박스오피스</NavLink>

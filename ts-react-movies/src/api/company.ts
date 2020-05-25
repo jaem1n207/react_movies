@@ -3,7 +3,7 @@ import defaultApi from "./defaultApi";
 const API_KEY = `key=${process.env.REACT_APP_MOVIE_API_KEY}`;
 
 export const getCompanyList = () => {
-  return defaultApi.get(`company/searchCompanyList.json?key=${API_KEY}}`);
+  return defaultApi.get(`company/searchCompanyList.json?${API_KEY}}`);
 };
 
 export const getCompanyInfo = (companyCd: string) => {

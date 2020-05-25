@@ -8,7 +8,8 @@ const Content = styled.div`
   color: #323232;
 `;
 
-const NotFoundPage: React.SFC = (props) => {
+interface NotFoundPageProps {}
+const NotFoundPage: React.SFC<NotFoundPageProps> = (props) => {
   return <Content>검색결과를 찾지 못했습니다!</Content>;
 };
 
