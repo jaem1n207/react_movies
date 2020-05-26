@@ -45,7 +45,7 @@ export const getDaily = (today: string) => {
 
       const result = await api.getDaily(today);
       console.log("OK");
-      const daily = result.data.boxofficeResult.dailyBoxOfficeList;
+      const daily = result.data.boxOfficeResult.dailyBoxOfficeList;
 
       dispatch(getDailySuccess({ loading: false, daily }));
     } catch (e) {
@@ -60,7 +60,7 @@ export const getWeekly = (today: string) => {
       dispatch(getWeeklyRequest({ loading: true }));
 
       const result = await api.getWeekly(today);
-      const weekly = result.data.boxofficeResult.weeklyBoxOfficeList;
+      const weekly = result.data.boxOfficeResult.weeklyBoxOfficeList;
 
       dispatch(getWeeklySuccess({ loading: false, weekly }));
     } catch (e) {
