@@ -6,17 +6,17 @@ import {
   GET_WEEKLY_SUCCESS,
   GET_WEEKLY_FAIL,
 } from "./actions";
-import { Action, BoxOfficeState } from "./types";
+import { Action, BoxofficeState } from "./types";
 import produce from "immer";
 
-const initialState: BoxOfficeState = {
+const initialState: BoxofficeState = {
   type: "",
   loading: false,
   daily: [],
   weekly: [],
 };
 
-const reducer = (state = initialState, action: Action): BoxOfficeState => {
+const reducer = (state = initialState, action: Action): BoxofficeState => {
   switch (action.type) {
     case GET_DAILY_REQUEST:
       return produce(state, (draft) => {

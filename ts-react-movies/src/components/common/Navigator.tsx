@@ -20,7 +20,7 @@ const NavItem = styled.nav`
   }
   li {
     padding: 0.4rem 0.4rem;
-    border-bottom: 1rem solid #ff4e50;
+    border-bottom: 0.6rem solid #ff4e50;
     cursor: pointer;
     &:hover {
       border-bottom: 0.4rem solid #9b0000;

@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-import boxoffice, { BoxOfficeState } from "./boxoffice";
+import boxoffice, { BoxofficeState } from "./boxoffice";
 
 const reducers = combineReducers({
   boxoffice,
@@ -9,5 +9,5 @@ const reducers = combineReducers({
 export default reducers;
 
 export interface RootState {
-  boxoffice: BoxOfficeState;
+  boxoffice: BoxofficeState;
 }

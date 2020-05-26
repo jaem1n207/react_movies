@@ -1,4 +1,4 @@
-export interface BoxOfficeState {
+export interface BoxofficeState {
   readonly type?: string;
   readonly loading: boolean;
   readonly daily?: Object;
