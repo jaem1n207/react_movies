@@ -5,10 +5,12 @@ import {
   faArrowDown,
   faMinus,
 } from "@fortawesome/free-solid-svg-icons";
-
-import Navigator from "./components/common/Navigator";
-import BoxofficePage from "./pages/BoxofficePage";
 import { library } from "@fortawesome/fontawesome-svg-core";
+
+import MainPage from "./pages/MainPage";
+import BoxofficePage from "./pages/BoxofficePage";
+import MovieInfoPage from "./pages/MovieInfoPage";
+import PeoplePage from "./pages/PeoplePage";
 
 /* 
   movie name color: E71D36
@@ -20,8 +22,10 @@ interface RootProps {}
 const Root: React.SFC<RootProps> = () => {
   return (
     <>
-      <Route exact path="/" component={Navigator} />
+      <Route exact path="/" component={MainPage} />
       <Route exact path="/boxoffice" component={BoxofficePage} />
+      <Route exact path="/movie" component={MovieInfoPage} />
+      <Route exact path="/people" component={PeoplePage} />
     </>
   );
 };
