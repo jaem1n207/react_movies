@@ -39,8 +39,6 @@ export const getWeeklyFail = (payload: BoxofficeState) => ({
 export const getDaily = (today: string) => {
   return async (dispatch: Dispatch) => {
     try {
-      console.log(today);
-
       dispatch(getWeeklyRequest({ loading: true }));
 
       const result = await api.getDaily(today);

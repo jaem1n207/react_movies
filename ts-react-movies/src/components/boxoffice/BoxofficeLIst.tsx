@@ -3,6 +3,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const MovieTitle = styled.div`
+  color: E71D36;
+`;
+
 interface BoxofficeListProps {
   type: string;
   boxoffice: Array<{
@@ -14,6 +18,7 @@ interface BoxofficeListProps {
     openDt: string; // 영화의 개봉일
     audiAcc: string; // 누적관객수
     audiCnt: string; // 해당 일의 관객수 (예매율 계산할 때 사용)
+    allAudi: string;
   }>;
 }
 
@@ -25,6 +30,12 @@ const Rank = styled.span`
 `;
 
 const BoxofficeList: React.FC<BoxofficeListProps> = ({ type, boxoffice }) => {
+  let allAudi = 0;
+
+  boxoffice.map((m) => {
+    allAudi += parseInt(m.audiCnt);
+  });
+
   return (
     <div className="Boxoffice">
       <div className="ListTitle">
@@ -42,6 +53,7 @@ const BoxofficeList: React.FC<BoxofficeListProps> = ({ type, boxoffice }) => {
             openDt={movie.openDt}
             audiAcc={movie.audiAcc}
             audiCnt={movie.audiCnt}
+            allAudi={allAudi.toString()}
           />
         ))}
       </div>
@@ -58,16 +70,18 @@ interface MovieComponent {
   openDt: string; // 영화의 개봉일
   audiAcc: string; // 누적관객수
   audiCnt: string; // 해당 일의 관객수 (예매율 계산할 때 사용)
+  allAudi: string;
 }
 
 const MovieComponent = (props: MovieComponent) => {
+  let bookRate = (parseInt(props.audiCnt) / parseInt(props.allAudi)) * 100;
+
   return (
     <div className="MovieRank">
       <div className="MovieRank">
         <div>
           <div>{props.rank}</div>
         </div>
-        <div>예매율: {}%</div>
         <div>
           {Number(props.rankInten) === 0 ? (
             <FontAwesomeIcon icon="minus" />
@@ -84,9 +98,13 @@ const MovieComponent = (props: MovieComponent) => {
           )}
         </div>
       </div>
-      <Link to={`/movie/${props.movieCd}`}>
-        <div className="MovieTitle">{props.movieNm}</div>
-      </Link>
+      <MovieTitle>
+        <Link to={`/movie/${props.movieCd}`}>{props.movieNm}</Link>
+      </MovieTitle>
+      <div>
+        예매율: {bookRate.toFixed(1)}% (
+        {props.audiCnt.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}명)
+      </div>
       <div className="MovieInfo">
         <div>{props.openDt.replace(/-/g, ".")}개봉</div>
         <div>
