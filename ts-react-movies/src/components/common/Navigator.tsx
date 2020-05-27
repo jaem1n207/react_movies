@@ -47,7 +47,7 @@ const Navigator: React.FC<NavigatorProps> = (props) => {
           <NavLink to="/movie">영화정보</NavLink>
         </li>
         <li>
-          <NavLink to="/people">영화인</NavLink>
+          <NavLink to="/cast">영화인</NavLink>
         </li>
       </ul>
     </NavItem>

@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Template from "../components/Template";
 import Navigator from "../components/common/Navigator";
 
@@ -16,8 +17,11 @@ const MainPage: React.SFC<MainPageProps> = () => {
     <Template>
       <Navigator />
       <MainContent>
-        <BoxofficeListContainer type="daily" />
-        <BoxofficeListContainer type="weekly" />
+        <BoxofficeListContainer type="daily" page={false} />
+        <BoxofficeListContainer type="weekly" page={false} />
+        <div>
+          <Link to="/boxoffice">더보기 ></Link>
+        </div>
       </MainContent>
     </Template>
   );

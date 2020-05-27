@@ -39,23 +39,25 @@ const BoxofficeList: React.FC<BoxofficeListProps> = ({ type, boxoffice }) => {
   return (
     <div className="Boxoffice">
       <div className="ListTitle">
-        {type === "daily" ? "일간 차트" : "주간 차트"}
+        {type === "daily" ? "일간 차트 Top5" : "주간 차트 Top5"}
       </div>
       <div className="MovieUl">
-        {boxoffice.map((movie) => (
-          <MovieComponent
-            key={movie.movieCd}
-            movieCd={movie.movieCd}
-            rank={movie.rank}
-            rankInten={movie.rankInten}
-            rankOldAndNew={movie.rankOldAndNew}
-            movieNm={movie.movieNm}
-            openDt={movie.openDt}
-            audiAcc={movie.audiAcc}
-            audiCnt={movie.audiCnt}
-            allAudi={allAudi.toString()}
-          />
-        ))}
+        {boxoffice
+          .map((movie) => (
+            <MovieComponent
+              key={movie.movieCd}
+              movieCd={movie.movieCd}
+              rank={movie.rank}
+              rankInten={movie.rankInten}
+              rankOldAndNew={movie.rankOldAndNew}
+              movieNm={movie.movieNm}
+              openDt={movie.openDt}
+              audiAcc={movie.audiAcc}
+              audiCnt={movie.audiCnt}
+              allAudi={allAudi.toString()}
+            />
+          ))
+          .slice(0, 5)}
       </div>
     </div>
   );

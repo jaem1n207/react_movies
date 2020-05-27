@@ -26,7 +26,7 @@ const BoxofficePage: React.SFC<BoxofficePageProps> = (props) => {
         </div>
       </nav>
       <BoxofficeList>
-        <BoxofficeListContainer type={boxofficeType} />
+        <BoxofficeListContainer type={boxofficeType} page={true} />
       </BoxofficeList>
     </Template>
   );

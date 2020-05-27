@@ -4,8 +4,10 @@ import { format, subDays } from "date-fns";
 
 import { RootState } from "../../modules";
 import BoxofficeList from "../../components/boxoffice/BoxofficeList";
+import {} from "../../components/boxoffice/TopBoxofficeList";
 import { getDaily, getWeekly } from "../../modules/boxoffice";
 import LoadingPage from "../../components/common/LoadingPage";
+import TopBoxofficeList from "../../components/boxoffice/TopBoxofficeList";
 
 interface BoxofficeListContainerProps {
   type: string;
@@ -14,6 +16,7 @@ interface BoxofficeListContainerProps {
   getWeekly: Function;
   daily: any;
   weekly: any;
+  page?: boolean;
 }
 
 const BoxofficeListContainer: React.FC<BoxofficeListContainerProps> = ({
@@ -23,6 +26,7 @@ const BoxofficeListContainer: React.FC<BoxofficeListContainerProps> = ({
   daily,
   weekly,
   type,
+  page,
 }) => {
   useEffect(() => {
     type === "daily"
@@ -34,8 +38,13 @@ const BoxofficeListContainer: React.FC<BoxofficeListContainerProps> = ({
     <>
       {loading ? (
         <LoadingPage />
-      ) : (
+      ) : page ? (
         <BoxofficeList
+          type={type}
+          boxoffice={type === "daily" ? daily : weekly}
+        />
+      ) : (
+        <TopBoxofficeList
           type={type}
           boxoffice={type === "daily" ? daily : weekly}
         />
