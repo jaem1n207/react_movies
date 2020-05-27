@@ -4,7 +4,6 @@ import { format, subDays } from "date-fns";
 
 import { RootState } from "../../modules";
 import BoxofficeList from "../../components/boxoffice/BoxofficeList";
-import {} from "../../components/boxoffice/TopBoxofficeList";
 import { getDaily, getWeekly } from "../../modules/boxoffice";
 import LoadingPage from "../../components/common/LoadingPage";
 import TopBoxofficeList from "../../components/boxoffice/TopBoxofficeList";
