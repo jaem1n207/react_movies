@@ -8,8 +8,8 @@ export const getMovieList = (movieNm: string) => {
   );
 };
 
-export const getMovieInfo = (movieNm: string) => {
+export const getMovieInfo = (movieCd: string) => {
   return defaultApi.get(
-    `movie/searchMovieInfo.json?${API_KEY}&movieNm=${movieNm}`
+    `movie/searchMovieInfo.json?${API_KEY}&movieNm=${movieCd}`
   );
 };
