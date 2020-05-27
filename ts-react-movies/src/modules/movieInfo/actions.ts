@@ -2,13 +2,13 @@ import { MovieState } from "./types";
 import { Dispatch } from "redux";
 import * as api from "../../api/movie";
 
-const GET_MOVIE_REQUEST = "movieInfo/GET_MOVIE_REQUEST";
-const GET_MOVIE_SUCCESS = "movieInfo/GET_MOVIE_SUCCESS";
-const GET_MOVIE_FAIL = "movieInfo/GET_MOVIE_FAIL";
+export const GET_MOVIE_REQUEST = "movieInfo/GET_MOVIE_REQUEST";
+export const GET_MOVIE_SUCCESS = "movieInfo/GET_MOVIE_SUCCESS";
+export const GET_MOVIE_FAIL = "movieInfo/GET_MOVIE_FAIL";
 
-const GET_MOVIE_INFO_REQUEST = "movieInfo/GET_MOVIE_INFO_REQUEST";
-const GET_MOVIE_INFO_SUCCESS = "movieInfo/GET_MOVIE_INFO_SUCCESS";
-const GET_MOVIE_INFO_FAIL = "movieInfo/GET_MOVIE_INFO_FAIL";
+export const GET_MOVIE_INFO_REQUEST = "movieInfo/GET_MOVIE_INFO_REQUEST";
+export const GET_MOVIE_INFO_SUCCESS = "movieInfo/GET_MOVIE_INFO_SUCCESS";
+export const GET_MOVIE_INFO_FAIL = "movieInfo/GET_MOVIE_INFO_FAIL";
 
 export const getMovieRequest = (payload: MovieState) => ({
   type: GET_MOVIE_REQUEST,
