@@ -10,6 +10,7 @@ import {
 
 import Actors from "./Info/Actors";
 import ShowTypes from "./Info/ShowTypes";
+import Genre from "./Info/Genre";
 
 const InfoContent = styled.section`
   margin-top: 0.6rem;
@@ -66,6 +67,7 @@ const movieInfo: React.SFC<MovieInfoProps> = ({ movieInfo }) => {
       </KrNm>
       <EnNm>{movieNmEn}</EnNm>
       <ShowTypes showTypes={showTypes} />
+      <Genre genres={genres} showTm={showTm} openDt={openDt} />
       <Actors actors={actors} />
     </InfoContent>
   );
