@@ -9,6 +9,7 @@ import {
 } from "../../modules/movieInfo/types";
 
 import Actors from "./Info/Actors";
+import ShowTypes from "./Info/ShowTypes";
 
 const InfoContent = styled.section`
   margin-top: 0.6rem;
@@ -64,6 +65,7 @@ const movieInfo: React.SFC<MovieInfoProps> = ({ movieInfo }) => {
         {prdtYear}
       </KrNm>
       <EnNm>{movieNmEn}</EnNm>
+      <ShowTypes showTypes={showTypes} />
       <Actors actors={actors} />
     </InfoContent>
   );
