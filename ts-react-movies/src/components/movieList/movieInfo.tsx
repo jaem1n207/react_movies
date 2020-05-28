@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 import {
   DirectorType,
   ActorType,
@@ -9,8 +8,20 @@ import {
   AuditType,
 } from "../../modules/movieInfo/types";
 
+import Actors from "./Info/Actors";
+
 const InfoContent = styled.section`
   margin-top: 0.6rem;
+`;
+
+const KrNm = styled.h1`
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin: 0;
+`;
+const EnNm = styled.h3`
+  font-size: 1.25rem;
+  margin: 0;
 `;
 
 interface MovieInfoProps {
@@ -48,11 +59,12 @@ const movieInfo: React.SFC<MovieInfoProps> = ({ movieInfo }) => {
 
   return (
     <InfoContent>
-      <div className="KrNm">
+      <KrNm>
         {movieNm}
         {prdtYear}
-      </div>
-      <div className="EnNm">{movieNmEn}</div>
+      </KrNm>
+      <EnNm>{movieNmEn}</EnNm>
+      <Actors actors={actors} />
     </InfoContent>
   );
 };
