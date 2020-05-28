@@ -13,7 +13,7 @@ interface MovieInfoListProps {
         movieNm: string;
         movieNmEn: string;
         openDt: string;
-        genreAlt: string;
+        genreAlt: string; // 영화 장르 전체 출력
         directors:
           | Array<{
               peopleNm: string;
@@ -41,17 +41,17 @@ const movieInfoList: React.SFC<MovieInfoListProps> = ({
       </div>
       <div>
         {movies && movies.length > 0 ? (
-          movies.map((movie) => {
+          movies.map((movie) => (
             <MovieCard
               key={movie.movieCd}
               movieNm={movie.movieNm}
               movieNmEn={movie.movieNmEn}
               movieCd={movie.movieCd}
               directors={movie.directors}
-              genreAlt={movie.directors}
+              genreAlt={movie.genreAlt}
               openDt={movie.openDt}
-            />;
-          })
+            />
+          ))
         ) : (
           <NotFoundPage />
         )}
@@ -91,7 +91,7 @@ const MovieCard: React.SFC<MovieCardProps> = ({
       </Link>
       <div className="MovieInfo">
         <p>
-          감독:
+          감독:{" "}
           {directors && directors.length > 0
             ? directors.map((director, index) => {
                 return directors.length - 1 === index

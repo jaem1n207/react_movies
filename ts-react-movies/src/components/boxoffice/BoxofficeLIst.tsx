@@ -74,7 +74,14 @@ interface MovieComponent {
 }
 
 const MovieComponent = (props: MovieComponent) => {
-  let bookRate = (parseInt(props.audiCnt) / parseInt(props.allAudi)) * 100;
+  const bookRate2 = React.useMemo(
+    () => bookRate(props.audiCnt, props.allAudi),
+    [props.audiCnt, props.allAudi]
+  );
+
+  function bookRate(audiCnt: string, allAudi: string) {
+    return (parseInt(audiCnt) / parseInt(allAudi)) * 100;
+  }
 
   return (
     <div className="MovieRank">
@@ -102,7 +109,7 @@ const MovieComponent = (props: MovieComponent) => {
         <Link to={`/movie/${props.movieCd}`}>{props.movieNm}</Link>
       </MovieTitle>
       <div>
-        예매율: {bookRate.toFixed(1)}% (
+        예매율: {bookRate2.toFixed(1)}% (
         {props.audiCnt.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}명)
       </div>
       <div className="MovieInfo">
