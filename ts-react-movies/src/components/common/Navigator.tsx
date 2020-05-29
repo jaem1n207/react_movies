@@ -6,7 +6,7 @@ const NavItem = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4.4rem;
+  height: 5%;
   background-color: #ff4e50;
   ul {
     display: flex;

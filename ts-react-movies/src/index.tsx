@@ -11,6 +11,7 @@ import { logger } from "redux-logger";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { createStore, applyMiddleware } from "redux";
 import reducers from "./modules";
+import "./styles/darkmode.scss";
 
 const middlewares = [Thunk, logger];
 const store = createStore(
@@ -22,7 +23,8 @@ const GlobalStyle = createGlobalStyle`
       body {
               padding: 0;
               margin: 0;
-              background-color: #e3dede;
+              height: 100vh;
+
             }
           * {
               box-sizing: border-box;
@@ -32,8 +34,10 @@ const GlobalStyle = createGlobalStyle`
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <GlobalStyle />
-      <Root />
+      <div className="dark-mode">
+        <GlobalStyle />
+        <Root />
+      </div>
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")

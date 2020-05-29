@@ -9,6 +9,7 @@ import BoxofficeListContainer from "../containers/boxoffice/BoxofficeListContain
 const MainContent = styled.div`
   display: flex;
   justify-content: center;
+  height: 95%;
 `;
 
 interface MainPageProps {}

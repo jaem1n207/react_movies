@@ -3,8 +3,72 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const Boxoffice = styled.article`
+  margin: 0 1rem;
+`;
+
+const ListTitle = styled.div`
+  text-align: center;
+  margin: 1.875rem 0;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 4rem;
+`;
+
+const MovieUl = styled.ul``;
+
+const MovieLi = styled.li`
+  display: flex;
+  justify-content: space-between;
+  height: 5.3125rem;
+  border-radius: 0.25rem;
+  border: 0.5px solid #d0e6e4;
+  box-shadow: 0.125rem 0.1875rem #8bc2bb;
+  margin-bottom: 3rem;
+  a {
+    display: flex;
+  }
+  &:hover {
+    box-shadow: 2px 2px 10px 3px #000;
+  }
+`;
+
+const MovieRank = styled.div`
+  /* 순위 */
+  width: 4.375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 0.3125rem;
+  text-align: center;
+
+  div:first-child {
+    font-size: 1.5625rem;
+    font-weight: bold;
+  }
+
+  div:last-child {
+    font-size: 0.8125rem;
+  }
+`;
+
 const MovieTitle = styled.div`
-  color: E71D36;
+  /* 제목 */
+  font-size: 1.5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  /* max-width: 55%; */
+  cursor: pointer;
+`;
+
+const MovieInfo = styled.div`
+  /* 정보 */
+  text-align: right;
+  min-width: 7.5rem;
+  font-size: 0.8125rem;
+  margin-top: auto;
+  margin-bottom: 0.625rem;
+  margin-right: 0.625rem;
 `;
 
 interface BoxofficeListProps {
@@ -37,11 +101,11 @@ const BoxofficeList: React.FC<BoxofficeListProps> = ({ type, boxoffice }) => {
   });
 
   return (
-    <div className="Boxoffice">
-      <div className="ListTitle">
+    <Boxoffice>
+      <ListTitle>
         {type === "daily" ? "일간 차트 Top5" : "주간 차트 Top5"}
-      </div>
-      <div className="MovieUl">
+      </ListTitle>
+      <MovieUl>
         {boxoffice
           .map((movie) => (
             <MovieComponent
@@ -58,8 +122,8 @@ const BoxofficeList: React.FC<BoxofficeListProps> = ({ type, boxoffice }) => {
             />
           ))
           .slice(0, 5)}
-      </div>
-    </div>
+      </MovieUl>
+    </Boxoffice>
   );
 };
 
@@ -79,8 +143,8 @@ const MovieComponent = (props: MovieComponent) => {
   let bookRate = (parseInt(props.audiCnt) / parseInt(props.allAudi)) * 100;
 
   return (
-    <div className="MovieRank">
-      <div className="MovieRank">
+    <MovieLi>
+      <MovieRank>
         <div>
           <div>{props.rank}</div>
         </div>
@@ -99,7 +163,7 @@ const MovieComponent = (props: MovieComponent) => {
             </Rank>
           )}
         </div>
-      </div>
+      </MovieRank>
       <MovieTitle>
         <Link to={`/movie/${props.movieCd}`}>{props.movieNm}</Link>
       </MovieTitle>
@@ -107,13 +171,13 @@ const MovieComponent = (props: MovieComponent) => {
         예매율: {bookRate.toFixed(1)}% (
         {props.audiCnt.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}명)
       </div>
-      <div className="MovieInfo">
+      <MovieInfo>
         <div>{props.openDt.replace(/-/g, ".")}개봉</div>
         <div>
           누적관객수: {props.audiAcc.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}명
         </div>
-      </div>
-    </div>
+      </MovieInfo>
+    </MovieLi>
   );
 };
 

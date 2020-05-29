@@ -6,10 +6,31 @@ import Template from "../components/Template";
 import Navigator from "../components/common/Navigator";
 import BoxofficeListContainer from "../containers/boxoffice/BoxofficeListContainer";
 
+const BoxofficeContent = styled.section`
+  display: flex;
+  flex-direction: column;
+`;
+
+const SubNav = styled.ul`
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  li {
+    margin-top: 0.625rem;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+    text-align: center;
+    min-width: 4.375rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+`;
+
 const BoxofficeList = styled.section`
   display: flex;
   justify-content: center;
-  margin-top: 1.2rem;
+  margin-top: 2.5rem;
 `;
 
 interface BoxofficePageProps {}
@@ -18,16 +39,18 @@ const BoxofficePage: React.SFC<BoxofficePageProps> = (props) => {
 
   return (
     <Template>
-      <Navigator />
-      <nav>
-        <div className="SubNav">
-          <li onClick={() => setBoxofficeType("daily")}>Daily</li>
-          <li onClick={() => setBoxofficeType("weekly")}>Weekly</li>
-        </div>
-      </nav>
-      <BoxofficeList>
-        <BoxofficeListContainer type={boxofficeType} page={true} />
-      </BoxofficeList>
+      <BoxofficeContent>
+        <Navigator />
+        <nav>
+          <SubNav>
+            <li onClick={() => setBoxofficeType("daily")}>Daily</li>
+            <li onClick={() => setBoxofficeType("weekly")}>Weekly</li>
+          </SubNav>
+        </nav>
+        <BoxofficeList>
+          <BoxofficeListContainer type={boxofficeType} page={true} />
+        </BoxofficeList>
+      </BoxofficeContent>
     </Template>
   );
 };
