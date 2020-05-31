@@ -1,5 +1,7 @@
-$main-dark: rgba(18, 18, 18, 0.9);
-$box-dark: rgba(18, 18, 18, 0.5);
+$main-dark: rgba(18, 18, 18, 1);
+$box-dark: #282828;
+$white-font: rgba(255, 255, 255, 0.83);
+$sub-white-font: rgba(255, 255, 255, 0.68);
 
 body {
   margin: 0;
@@ -20,8 +22,34 @@ body {
 
 .dark-mode {
   background-color: $main-dark;
-  color: #999;
+  color: $white-font;
   .section {
     background-color: $box-dark;
+  }
+  nav {
+    background-color: $box-dark;
+    ul {
+      background-color: $box-dark;
+    }
+  }
+  // main li
+  .kIaxrY {
+    background-color: $box-dark;
+    border: 0.5px solid $box-dark;
+    box-shadow: 0.125rem 0.1875rem $box-dark;
+    a {
+      color: $white-font;
+    }
+  }
+  .dJLnlh {
+    margin-right: 1rem;
+  }
+  // 예매율
+  .eDNtZ {
+    color: $sub-white-font;
+  }
+  // 개봉일, 누적관객수
+  .hVDIiZ {
+    color: $sub-white-font;
   }
 }

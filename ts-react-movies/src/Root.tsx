@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router";
+import { Switch, Route } from "react-router";
 import {
   faArrowUp,
   faArrowDown,
@@ -12,6 +12,7 @@ import MainPage from "./pages/MainPage";
 import BoxofficePage from "./pages/BoxofficePage";
 import MovieInfoPage from "./pages/MovieInfoPage";
 import CastPage from "./pages/CastPage";
+import LoadFailPage from "./pages/LoadFailPage";
 
 /* 
   movie name color: E71D36
@@ -27,12 +28,15 @@ interface RootProps {}
 const Root: React.SFC<RootProps> = () => {
   return (
     <RootDiv>
-      <Route exact path="/" component={MainPage} />
-      <Route exact path="/boxoffice" component={BoxofficePage} />
-      <Route exact path="/movie" component={MovieInfoPage} />
-      <Route exact path="/movie/:movieCd" component={MovieInfoPage} />
-      <Route exact path="/cast" component={CastPage} />
-      <Route exact path="/cast/:castCd" component={CastPage} />
+      <Switch>
+        <Route exact path="/" component={MainPage} />
+        <Route exact path="/boxoffice" component={BoxofficePage} />
+        <Route exact path="/movie" component={MovieInfoPage} />
+        <Route exact path="/movie/:movieCd" component={MovieInfoPage} />
+        <Route exact path="/cast" component={CastPage} />
+        <Route exact path="/cast/:castCd" component={CastPage} />
+        <Route component={LoadFailPage} />
+      </Switch>
     </RootDiv>
   );
 };

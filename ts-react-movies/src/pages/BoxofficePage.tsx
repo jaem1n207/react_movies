@@ -41,12 +41,12 @@ const BoxofficePage: React.SFC<BoxofficePageProps> = (props) => {
     <Template>
       <BoxofficeContent>
         <Navigator />
-        <nav>
+        <>
           <SubNav>
             <li onClick={() => setBoxofficeType("daily")}>Daily</li>
             <li onClick={() => setBoxofficeType("weekly")}>Weekly</li>
           </SubNav>
-        </nav>
+        </>
         <BoxofficeList>
           <BoxofficeListContainer type={boxofficeType} page={true} />
         </BoxofficeList>

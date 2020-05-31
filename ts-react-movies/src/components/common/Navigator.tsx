@@ -3,27 +3,27 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 const NavItem = styled.nav`
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5%;
-  background-color: #ff4e50;
+  height: 7%;
   ul {
     display: flex;
     justify-content: space-between;
-    width: 40rem;
+    width: 85rem;
     margin-top: 2rem;
-    color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: bold;
     list-style: none;
   }
   li {
-    padding: 0.4rem 0.4rem;
-    border-bottom: 0.6rem solid #ff4e50;
+    margin-right: 2rem;
+    padding: 1.2rem 4.4rem;
+    border-bottom: 0.6rem solid rgba(14, 14, 14, 0);
     cursor: pointer;
     &:hover {
-      border-bottom: 0.4rem solid #9b0000;
+      border-bottom: 0.4rem solid rgba(255, 255, 255, 0.6);
     }
     a {
       text-decoration: none;

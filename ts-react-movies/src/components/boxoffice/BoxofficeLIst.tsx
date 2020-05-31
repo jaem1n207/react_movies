@@ -20,7 +20,7 @@ const MovieUl = styled.ul``;
 const MovieLi = styled.li`
   display: flex;
   justify-content: space-between;
-  height: 5.3125rem;
+  height: 5.4rem;
   border-radius: 0.25rem;
   border: 0.5px solid #d0e6e4;
   box-shadow: 0.125rem 0.1875rem #8bc2bb;

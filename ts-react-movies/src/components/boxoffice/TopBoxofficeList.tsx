@@ -5,14 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Boxoffice = styled.article`
   margin: 0 1rem;
+  width: 40%;
 `;
 
 const ListTitle = styled.div`
   text-align: center;
   margin: 1.875rem 0;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 `;
 
 const MovieUl = styled.ul``;
@@ -20,10 +21,8 @@ const MovieUl = styled.ul``;
 const MovieLi = styled.li`
   display: flex;
   justify-content: space-between;
-  height: 5.3125rem;
+  height: 11rem;
   border-radius: 0.25rem;
-  border: 0.5px solid #d0e6e4;
-  box-shadow: 0.125rem 0.1875rem #8bc2bb;
   margin-bottom: 3rem;
   a {
     display: flex;
@@ -43,18 +42,18 @@ const MovieRank = styled.div`
   text-align: center;
 
   div:first-child {
-    font-size: 1.5625rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 
   div:last-child {
-    font-size: 0.8125rem;
+    font-size: 1.8rem;
   }
 `;
 
 const MovieTitle = styled.div`
   /* 제목 */
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   margin-top: auto;
   margin-bottom: auto;
   /* max-width: 55%; */
@@ -65,10 +64,14 @@ const MovieInfo = styled.div`
   /* 정보 */
   text-align: right;
   min-width: 7.5rem;
-  font-size: 0.8125rem;
+  font-size: 1.4rem;
   margin-top: auto;
   margin-bottom: 0.625rem;
   margin-right: 0.625rem;
+`;
+
+const BookRate = styled.div`
+  margin-top: 4.5rem;
 `;
 
 interface BoxofficeListProps {
@@ -167,12 +170,10 @@ const MovieComponent = (props: MovieComponent) => {
       <MovieTitle>
         <Link to={`/movie/${props.movieCd}`}>{props.movieNm}</Link>
       </MovieTitle>
-      <div>
-        예매율: {bookRate.toFixed(1)}% (
-        {props.audiCnt.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}명)
-      </div>
+      <BookRate></BookRate>
       <MovieInfo>
         <div>{props.openDt.replace(/-/g, ".")}개봉</div>
+        <div>예매율: {bookRate.toFixed(1)}%</div>
         <div>
           누적관객수: {props.audiAcc.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}명
         </div>
