@@ -3,12 +3,18 @@ $box-dark: #282828;
 $white-font: rgba(255, 255, 255, 0.83);
 $sub-white-font: rgba(255, 255, 255, 0.68);
 
+#root {
+  overflow-x: hidden;
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
     "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 100%;
 }
 
 .RootDiv {
@@ -23,17 +29,10 @@ body {
 .dark-mode {
   background-color: $main-dark;
   color: $white-font;
-  .section {
-    background-color: $box-dark;
+  section {
+    background-color: $main-dark;
   }
-  nav {
-    background-color: $box-dark;
-    ul {
-      background-color: $box-dark;
-    }
-  }
-  // main li
-  .kIaxrY {
+  article li {
     background-color: $box-dark;
     border: 0.5px solid $box-dark;
     box-shadow: 0.125rem 0.1875rem $box-dark;
@@ -41,14 +40,21 @@ body {
       color: $white-font;
     }
   }
-  .dJLnlh {
+  nav {
+    background-color: $box-dark;
+    ul {
+      background-color: $box-dark;
+    }
+  }
+  // movieTitle
+  .dJLnlh .lnXTZu {
     margin-right: 1rem;
   }
-  // 예매율
+  // 예매율 top
   .eDNtZ {
     color: $sub-white-font;
   }
-  // 개봉일, 누적관객수
+  // 개봉일, 누적관객수 top
   .hVDIiZ {
     color: $sub-white-font;
   }

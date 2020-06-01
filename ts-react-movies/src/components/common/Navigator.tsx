@@ -7,7 +7,7 @@ const NavItem = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 7%;
+  height: 65px;
   ul {
     display: flex;
     justify-content: space-between;
@@ -26,6 +26,8 @@ const NavItem = styled.nav`
       border-bottom: 0.4rem solid rgba(255, 255, 255, 0.6);
     }
     a {
+      font-size: 2rem;
+      display: block;
       text-decoration: none;
       color: #fff;
     }

@@ -11,8 +11,8 @@ const ListTitle = styled.div`
   text-align: center;
   margin-bottom: 4rem
   font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
 `;
 
 const MovieUl = styled.ul``;
@@ -20,7 +20,8 @@ const MovieUl = styled.ul``;
 const MovieLi = styled.li`
   display: flex;
   justify-content: space-between;
-  height: 5.4rem;
+  height: 10rem;
+  flex-basis: 0;
   border-radius: 0.25rem;
   border: 0.5px solid #d0e6e4;
   box-shadow: 0.125rem 0.1875rem #8bc2bb;
@@ -61,11 +62,17 @@ const MovieTitle = styled.div`
   cursor: pointer;
 `;
 
+const MovieOpenDt = styled.div`
+  /* 개봉일 */
+  margin-top: 0.4rem;
+  font-size: 1.4rem;
+`;
+
 const MovieInfo = styled.div`
   /* 정보 */
   text-align: right;
   min-width: 7.5rem;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   margin-top: auto;
   margin-bottom: 0.625rem;
   margin-right: 0.625rem;
@@ -167,13 +174,10 @@ const MovieComponent = (props: MovieComponent) => {
       </MovieRank>
       <MovieTitle>
         <Link to={`/movie/${props.movieCd}`}>{props.movieNm}</Link>
+        <MovieOpenDt>{props.openDt.replace(/-/g, ".")}개봉</MovieOpenDt>
       </MovieTitle>
-      <div>
-        예매율: {bookRate2.toFixed(1)}% (
-        {props.audiCnt.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}명)
-      </div>
       <MovieInfo>
-        <div>{props.openDt.replace(/-/g, ".")}개봉</div>
+        <div>예매율: {bookRate2.toFixed(1)}%</div>
         <div>
           누적관객수: {props.audiAcc.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}명
         </div>

@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../../styles/darkmode.scss";
 
 const Boxoffice = styled.article`
   margin: 0 1rem;
@@ -58,6 +59,13 @@ const MovieTitle = styled.div`
   margin-bottom: auto;
   /* max-width: 55%; */
   cursor: pointer;
+  width: 25rem;
+`;
+
+const MovieOpenDt = styled.div`
+  /* 개봉일 */
+  margin-top: 0.4rem;
+  font-size: 1.4rem;
 `;
 
 const MovieInfo = styled.div`
@@ -169,10 +177,11 @@ const MovieComponent = (props: MovieComponent) => {
       </MovieRank>
       <MovieTitle>
         <Link to={`/movie/${props.movieCd}`}>{props.movieNm}</Link>
+        <MovieOpenDt>{props.openDt.replace(/-/g, ".")}개봉</MovieOpenDt>
       </MovieTitle>
+
       <BookRate></BookRate>
       <MovieInfo>
-        <div>{props.openDt.replace(/-/g, ".")}개봉</div>
         <div>예매율: {bookRate.toFixed(1)}%</div>
         <div>
           누적관객수: {props.audiAcc.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}명

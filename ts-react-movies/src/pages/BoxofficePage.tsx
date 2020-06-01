@@ -30,7 +30,7 @@ const SubNav = styled.ul`
 const BoxofficeList = styled.section`
   display: flex;
   justify-content: center;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
 `;
 
 interface BoxofficePageProps {}

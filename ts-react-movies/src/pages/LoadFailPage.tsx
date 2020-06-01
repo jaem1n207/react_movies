@@ -9,15 +9,16 @@ const PosStyle = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: rgba(255, 255, 255, 0.83);
 `;
 
 const NBtnStyle = styled.button`
   border-radius: 10px;
-
+  border: 0.5px solid #282828;
   padding: 10px 20px;
   font-size: 1.4rem;
   font-weight: bold;
-  background-color: $box-dark;
+  background-color: #282828; !important
 `;
 
 interface LoadFailPageProps extends RouteComponentProps<any> {}
