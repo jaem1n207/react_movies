@@ -11,19 +11,31 @@ import {
 import Actors from "./Info/Actors";
 import ShowTypes from "./Info/ShowTypes";
 import Genre from "./Info/Genre";
+import Companys from "./Info/companys";
+import Directors from "./Info/Directors";
 
 const InfoContent = styled.section`
-  margin-top: 0.6rem;
+  width: 38rem;
+  & > section {
+    margin-top: 0.65rem;
+  }
 `;
 
 const KrNm = styled.h1`
   font-size: 1.9rem;
   font-weight: bold;
   margin: 0;
+  color: rgba(255, 255, 255, 0.83);
+  & > span {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+  }
 `;
 const EnNm = styled.h3`
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   margin: 0;
+  color: rgba(255, 255, 255, 0.83);
 `;
 
 interface MovieInfoProps {
@@ -52,15 +64,16 @@ const movieInfo: React.SFC<MovieInfoProps> = ({ movieInfo }) => {
     actors,
     directors,
     companys,
-    audits,
     genres,
     openDt,
     showTm,
     showTypes,
+    audits,
   } = movieInfo;
 
   return (
     <InfoContent>
+      <Audits></Audits>
       <KrNm>
         {movieNm}
         {prdtYear}
@@ -68,6 +81,8 @@ const movieInfo: React.SFC<MovieInfoProps> = ({ movieInfo }) => {
       <EnNm>{movieNmEn}</EnNm>
       <ShowTypes showTypes={showTypes} />
       <Genre genres={genres} showTm={showTm} openDt={openDt} />
+      <Companys companys={companys} />
+      <Directors directors={directors} />
       <Actors actors={actors} />
     </InfoContent>
   );
