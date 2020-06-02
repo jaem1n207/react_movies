@@ -8,6 +8,7 @@ import {
   AuditType,
 } from "../../modules/movieInfo/types";
 
+import Audits from "./Info/Audits";
 import Actors from "./Info/Actors";
 import ShowTypes from "./Info/ShowTypes";
 import Genre from "./Info/Genre";
@@ -73,7 +74,7 @@ const movieInfo: React.SFC<MovieInfoProps> = ({ movieInfo }) => {
 
   return (
     <InfoContent>
-      <Audits></Audits>
+      <Audits audits={audits} />
       <KrNm>
         {movieNm}
         {prdtYear}

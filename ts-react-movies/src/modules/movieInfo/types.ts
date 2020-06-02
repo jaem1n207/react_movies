@@ -50,5 +50,6 @@ export interface CompanyType {
 
 // 심의정보
 export interface AuditType {
+  auditNo: string; // ex) "2017-MF02139"
   watchGradeNm: string; // ex) 15세이상관람가
 }
