@@ -12,6 +12,11 @@ const MainContent = styled.div`
   height: 90%;
 `;
 
+const MoreContent = styled.div`
+  /* 더보기 */
+  margin-top: 4rem;
+`;
+
 interface MainPageProps {}
 const MainPage: React.SFC<MainPageProps> = () => {
   return (
@@ -20,9 +25,9 @@ const MainPage: React.SFC<MainPageProps> = () => {
       <MainContent>
         <BoxofficeListContainer type="daily" page={false} />
         <BoxofficeListContainer type="weekly" page={false} />
-        <div>
+        <MoreContent>
           <Link to="/boxoffice">더보기 ></Link>
-        </div>
+        </MoreContent>
       </MainContent>
     </Template>
   );

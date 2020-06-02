@@ -19,17 +19,17 @@ const NavItem = styled.nav`
   }
   li {
     margin-right: 2rem;
-    padding: 1.2rem 4.4rem;
-    border-bottom: 0.6rem solid rgba(14, 14, 14, 0);
+    padding: 1rem 4.4rem;
     cursor: pointer;
-    &:hover {
-      border-bottom: 0.4rem solid rgba(255, 255, 255, 0.6);
-    }
+
     a {
-      font-size: 2rem;
+      font-size: 2.15rem;
       display: block;
       text-decoration: none;
-      color: #fff;
+      color: #bb86fc;
+      &:hover {
+        color: rgba(255, 255, 255, 0.9);
+      }
     }
   }
 `;

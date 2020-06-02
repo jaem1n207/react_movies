@@ -5,23 +5,33 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Boxoffice = styled.article`
   margin: 0 1rem;
+  height: 800px;
 `;
 
 const ListTitle = styled.div`
   text-align: center;
-  margin-bottom: 4rem
-  font-size: 2rem;
+  margin: 1.875rem 0;
+  font-size: 2.4rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 `;
 
-const MovieUl = styled.ul``;
+const MovieUl = styled.ul`
+  height: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
 
 const MovieLi = styled.li`
+  margin-right: 3rem;
+  width: 35%;
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   height: 10rem;
-  flex-basis: 0;
   border-radius: 0.25rem;
   border: 0.5px solid #d0e6e4;
   box-shadow: 0.125rem 0.1875rem #8bc2bb;
@@ -55,7 +65,8 @@ const MovieRank = styled.div`
 
 const MovieTitle = styled.div`
   /* 제목 */
-  font-size: 1.5rem;
+  width: 20rem;
+  font-size: 2.2rem;
   margin-top: auto;
   margin-bottom: auto;
   /* max-width: 55%; */
@@ -65,14 +76,14 @@ const MovieTitle = styled.div`
 const MovieOpenDt = styled.div`
   /* 개봉일 */
   margin-top: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 `;
 
 const MovieInfo = styled.div`
   /* 정보 */
   text-align: right;
   min-width: 7.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: auto;
   margin-bottom: 0.625rem;
   margin-right: 0.625rem;

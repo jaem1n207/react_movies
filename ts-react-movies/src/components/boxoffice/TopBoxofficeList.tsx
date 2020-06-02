@@ -54,7 +54,7 @@ const MovieRank = styled.div`
 
 const MovieTitle = styled.div`
   /* 제목 */
-  font-size: 2.4rem;
+  font-size: 2.15rem;
   margin-top: auto;
   margin-bottom: auto;
   /* max-width: 55%; */
@@ -180,9 +180,8 @@ const MovieComponent = (props: MovieComponent) => {
         <MovieOpenDt>{props.openDt.replace(/-/g, ".")}개봉</MovieOpenDt>
       </MovieTitle>
 
-      <BookRate></BookRate>
       <MovieInfo>
-        <div>예매율: {bookRate.toFixed(1)}%</div>
+        <BookRate>예매율: {bookRate.toFixed(1)}%</BookRate>
         <div>
           누적관객수: {props.audiAcc.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}명
         </div>
