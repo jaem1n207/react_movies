@@ -40,7 +40,7 @@ export const getMovieInfoFail = (payload: MovieState) => ({
   payload,
 });
 
-export const getMovie = (movieNm: string) => {
+export const getMovies = (movieNm: string) => {
   return async (dispatch: Dispatch) => {
     try {
       dispatch(getMovieRequest({ type: "request", loading: true }));

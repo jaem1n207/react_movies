@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import NotFoundPage from "../common/NotFoundPage";
 
+const InputDiv = styled.div`
+  margin-top: 0.6rem;
+  margin-bottom: 2.4rem;
+`;
+
 interface MovieInfoListProps {
   keyword: string;
   setKeyword: Function;
@@ -30,15 +35,17 @@ const movieInfoList: React.SFC<MovieInfoListProps> = ({
 }) => {
   return (
     <>
-      <div>
+      <InputDiv>
         <input
           className="Keyword"
           type="text"
           value={keyword}
           onChange={(e) => setKeyword(e.target.value)}
           onKeyPress={handleKeyPress}
+          placeholder="검색어를 입력해주세요."
+          width="25%"
         />
-      </div>
+      </InputDiv>
       <div>
         {movies && movies.length > 0 ? (
           movies.map((movie) => (
@@ -59,6 +66,13 @@ const movieInfoList: React.SFC<MovieInfoListProps> = ({
     </>
   );
 };
+
+const MovieComponent = styled.div`
+  background-color: #282828;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+`;
 
 interface MovieCardProps {
   movieCd: string;
@@ -82,7 +96,7 @@ const MovieCard: React.SFC<MovieCardProps> = ({
   genreAlt,
 }) => {
   return (
-    <div className="MovieComponent">
+    <MovieComponent>
       <Link to={`movie/${movieCd}`}>
         <div className="MovieTitle">
           <h3>{movieNm}</h3>
@@ -98,8 +112,7 @@ const MovieCard: React.SFC<MovieCardProps> = ({
                   ? director.peopleNm
                   : director.peopleNm + ", ";
               })
-            : "정보없음"}
-          ) : "정보가 없어요."}
+            : "정보가 없어요."}
         </p>
         <p>장르: {genreAlt}</p>
         <p>
@@ -109,7 +122,7 @@ const MovieCard: React.SFC<MovieCardProps> = ({
             : "정보가 없어요."}
         </p>
       </div>
-    </div>
+    </MovieComponent>
   );
 };
 

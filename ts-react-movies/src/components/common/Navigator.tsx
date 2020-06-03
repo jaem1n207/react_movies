@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 const NavItem = styled.nav`
+  border-bottom: 0.1rem solid dimgray;
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
@@ -40,7 +41,7 @@ const Navigator: React.FC<NavigatorProps> = (props) => {
     <NavItem>
       <ul>
         <li>
-          <NavLink to="/">메인</NavLink>
+          <NavLink to="/">홈페이지</NavLink>
         </li>
         <li>
           <NavLink to="/boxoffice">박스오피스</NavLink>

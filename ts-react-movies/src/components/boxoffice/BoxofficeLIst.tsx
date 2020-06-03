@@ -9,9 +9,8 @@ const Boxoffice = styled.article`
 `;
 
 const ListTitle = styled.div`
-  text-align: center;
-  margin: 1.875rem 0;
-  font-size: 2.4rem;
+  margin-left: 15.5%;
+  font-size: 3.2rem;
   font-weight: bold;
   margin-bottom: 3rem;
 `;
@@ -36,11 +35,16 @@ const MovieLi = styled.li`
   border: 0.5px solid #d0e6e4;
   box-shadow: 0.125rem 0.1875rem #8bc2bb;
   margin-bottom: 1.875rem;
+  cursor: pointer;
+  transition-duration: 0.3s;
   a {
     display: flex;
+    width: 100%;
+    height: 100%;
   }
   &:hover {
     box-shadow: 2px 2px 10px 3px #000;
+    transform: scale(1.05);
   }
 `;
 
@@ -67,9 +71,10 @@ const MovieTitle = styled.div`
   /* 제목 */
   width: 20rem;
   font-size: 2.2rem;
+  margin: auto;
   margin-top: auto;
   margin-bottom: auto;
-  /* max-width: 55%; */
+  margin-left: 6%;
   cursor: pointer;
 `;
 

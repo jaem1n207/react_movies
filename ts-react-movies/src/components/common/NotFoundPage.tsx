@@ -5,7 +5,7 @@ const Content = styled.div`
   margin-top: 1.4rem;
   font-size: 24px;
   font-weight: bold;
-  color: #323232;
+  color: rgba(255, 255, 255, 0.83);
 `;
 
 interface NotFoundPageProps {}

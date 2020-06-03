@@ -1,5 +1,5 @@
 $main-dark: rgba(18, 18, 18, 1);
-$sub-dark: #282828;
+$sub-dark: rgba(31, 31, 35, 0.8);
 $white-font: rgba(255, 255, 255, 0.83);
 $sub-white-font: rgba(255, 255, 255, 0.68);
 $purple-font: #bb86fc;
@@ -30,6 +30,10 @@ body {
   color: $white-font;
   section {
     background-color: $main-white;
+    input {
+      color: $main-dark;
+      width: 200px;
+    }
   }
   article {
     /* 예매율, 관객수 */
@@ -104,6 +108,10 @@ body {
   color: $white-font;
   section {
     background-color: $main-dark;
+    input {
+      color: $main-dark;
+      width: 200px;
+    }
   }
   article {
     /* MovieTitle */
@@ -131,6 +139,7 @@ body {
       }
       a {
         color: $purple-font;
+        text-decoration: none;
       }
     }
   }
@@ -140,7 +149,7 @@ body {
       background-color: $main-dark;
     }
     a {
-      color: #bb86fc;
+      color: $white-font;
       &:hover {
         color: rgba(255, 255, 255, 0.9);
       }

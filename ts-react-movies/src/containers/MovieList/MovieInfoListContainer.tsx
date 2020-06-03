@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 
 import { RootState } from "../../modules";
 import MovieInfoList from "../../components/movieList/movieInfoList";
-import { getMovie } from "../../modules/movieInfo";
+import { getMovies } from "../../modules/movieInfo";
+import LoadingPage from "../../components/common/LoadingPage";
 
 interface MovieInfoListContainerProps {
   type: string;
@@ -12,6 +13,7 @@ interface MovieInfoListContainerProps {
   getMovies: Function;
 }
 const MovieInfoListContainer: React.SFC<MovieInfoListContainerProps> = ({
+  loading,
   movies,
   getMovies,
 }) => {
@@ -28,12 +30,18 @@ const MovieInfoListContainer: React.SFC<MovieInfoListContainerProps> = ({
   };
 
   return (
-    <MovieInfoList
-      keyword={keyword}
-      handleKeyPress={handleKeyPress}
-      movies={movies}
-      setKeyword={setKeyword}
-    />
+    <>
+      {loading ? (
+        <LoadingPage />
+      ) : (
+        <MovieInfoList
+          keyword={keyword}
+          handleKeyPress={handleKeyPress}
+          movies={movies}
+          setKeyword={setKeyword}
+        />
+      )}
+    </>
   );
 };
 
@@ -43,5 +51,5 @@ export default connect(
     loading: state.movie.loading,
     movies: state.movie.movies,
   }),
-  { getMovie }
+  { getMovies }
 )(MovieInfoListContainer);
