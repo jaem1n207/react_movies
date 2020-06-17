@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Section = styled.section`
-  font-size: 0.75rem;
+  font-size: 2rem;
 `;
 
 interface GenreProps {

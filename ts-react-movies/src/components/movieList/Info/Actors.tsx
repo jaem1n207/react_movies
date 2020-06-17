@@ -7,7 +7,7 @@ const Section = styled.section`
 `;
 
 const Title = styled.span`
-  font-size: 1.25rem;
+  font-size: 2.35rem;
   font-weight: bold;
   margin-bottom: 2px solid red;
 `;
@@ -25,14 +25,14 @@ const ActorsCard = styled.dl`
 `;
 
 const ActorKrNm = styled.dt`
-  font-size: 1rem;
+  font-size: 1.95rem;
   font-weight: bold;
 `;
 const ActorEnNm = styled.dd`
-  font-size: 0.75rem; // 12px
+  font-size: 1.6rem; // 12px
 `;
 const Cast = styled.dd`
-  font-size: 0.75rem;
+  font-size: 1.6rem;
   font-weight: bold;
   margin-top: 0.3rem;
 `;

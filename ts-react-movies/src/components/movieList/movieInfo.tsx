@@ -15,14 +15,20 @@ import Companys from "./Info/Companys";
 import Directors from "./Info/Directors";
 
 const InfoContent = styled.section`
-  width: 38rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   & > section {
     margin-top: 0.65rem;
   }
 `;
 
 const KrNm = styled.h1`
-  font-size: 1.9rem;
+  font-size: 3.2rem;
   font-weight: bold;
   margin: 0;
   color: rgba(255, 255, 255, 0.83);
@@ -33,7 +39,7 @@ const KrNm = styled.h1`
   }
 `;
 const EnNm = styled.h3`
-  font-size: 1.3rem;
+  font-size: 1.85rem;
   margin: 0;
   color: rgba(255, 255, 255, 0.83);
 `;

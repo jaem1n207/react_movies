@@ -10,7 +10,7 @@ const Section = styled.section`
 const ShowType = styled.div`
   margin-right: 6px;
   background-color: gray;
-  font-size: 0.75rem;
+  font-size: 1.55rem;
 `;
 
 interface ShowTypesProps {

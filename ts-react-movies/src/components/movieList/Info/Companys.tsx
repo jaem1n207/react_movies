@@ -7,12 +7,12 @@ const Section = styled.section`
   margin-top: 1.8rem !important;
 `;
 const Title = styled.span`
-  font-size: 1.4rem;
+  font-size: 2.4rem;
   font-weight: bold;
-  color: #282828;
+  color: #fff;
 `;
 const UnderLine = styled.hr`
-  border-top: "2px solid #282828";
+  border-top: "2px solid #fff";
 `;
 const Content = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ const CompanyCard = styled.dl`
   border: 0.8rem solid #282828;
   border-radius: 0.3rem;
   box-shadow: 0.8rem 0.8rem #282828;
-  font-size: 0.875rem;
+  font-size: 2.4rem;
   width: 14rem;
 `;
 const PartNm = styled.dt`
@@ -37,9 +37,10 @@ const NmKr = styled.dd`
   font-weight: bold;
   color: rgba(255, 255, 255, 0.83);
   padding-top: 0.2rem;
+  font-size: 1.7rem;
 `;
 const NmEn = styled.dd`
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.83);
 `;
 

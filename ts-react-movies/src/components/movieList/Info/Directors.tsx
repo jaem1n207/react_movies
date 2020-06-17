@@ -4,10 +4,10 @@ import styled from "styled-components";
 import { DirectorType } from "../../../modules/movieInfo";
 
 const Section = styled.section`
-  margin-top: 1.8rem !important;
+  margin-top: 2.6rem !important;
 `;
 const Title = styled.span`
-  font-size: 1.4rem;
+  font-size: 2.1rem;
   font-weight: bold;
   color: #282828;
 `;
@@ -21,11 +21,11 @@ const Wrapper = styled.div`
 const Content = styled.dl`
   padding: 0.13rem 0.6rem 0.6rem 0;
   dt {
-    font-size: 1.1rem;
+    font-size: 2.1rem;
     font-weight: bold;
   }
   dd {
-    font-size: 0.9rem;
+    font-size: 2rem;
     color: rgba(255, 255, 255, 0.83);
   }
 `;
