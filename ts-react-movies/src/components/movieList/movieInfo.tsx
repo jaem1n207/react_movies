@@ -41,18 +41,18 @@ const EnNm = styled.h3`
 interface MovieInfoProps {
   movieInfo: {
     movieNm: string;
-    showTm: string;
     movieNmEn: string;
+    showTm: number;
+    prdtYear: number;
     openDt: string;
-    prdtYear: string;
     genres: Array<{
       genreNm: string;
     }>;
     directors: Array<DirectorType>;
     actors: Array<ActorType>;
-    audits: Array<AuditType>;
     showTypes: Array<ShowtypeType>;
     companys: Array<CompanyType>;
+    audits: Array<AuditType>;
   };
 }
 

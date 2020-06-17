@@ -41,16 +41,24 @@ const Navigator: React.FC<NavigatorProps> = (props) => {
     <NavItem>
       <ul>
         <li>
-          <NavLink to="/">홈페이지</NavLink>
+          <NavLink exact to="/" activeStyle={{ color: "white" }}>
+            홈페이지
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/boxoffice">박스오피스</NavLink>
+          <NavLink to="/boxoffice" activeStyle={{ color: "white" }}>
+            박스오피스
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/movie">영화정보</NavLink>
+          <NavLink to="/movie" activeStyle={{ color: "white" }}>
+            영화정보
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/cast">영화인</NavLink>
+          <NavLink to="/cast" activeStyle={{ color: "white" }}>
+            영화인
+          </NavLink>
         </li>
       </ul>
     </NavItem>

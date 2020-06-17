@@ -7,7 +7,7 @@ const Section = styled.section`
 
 interface GenreProps {
   genres: Array<{ genreNm: string }>;
-  showTm: string;
+  showTm: number;
   openDt: string;
 }
 const Genre: React.SFC<GenreProps> = ({ genres, showTm, openDt }) => {

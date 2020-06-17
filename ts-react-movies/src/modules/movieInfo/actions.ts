@@ -60,12 +60,13 @@ export const getMovieInfo = (movieCd: string) => {
       dispatch(getMovieInfoRequest({ type: "request", loading: true }));
 
       const result = await api.getMovieInfo(movieCd);
-      const movieInfo = result.data.MovieInfoListResult.movieInfo;
+      const movieInfo = result.data.movieInfoResult.movieInfo;
+
       dispatch(
         getMovieInfoSuccess({ type: "success", loading: false, movieInfo })
       );
     } catch (e) {
-      dispatch(getMovieInfoFail({ type: "fail", loading: false }));
+      dispatch(getMovieFail({ type: "fail", loading: false }));
     }
   };
 };

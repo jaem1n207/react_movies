@@ -10,6 +10,6 @@ export const getMovieList = (movieNm: string) => {
 
 export const getMovieInfo = (movieCd: string) => {
   return defaultApi.get(
-    `movie/searchMovieInfo.json?${API_KEY}&movieNm=${movieCd}`
+    `movie/searchMovieInfo.json?${API_KEY}&movieCd=${movieCd}`
   );
 };
