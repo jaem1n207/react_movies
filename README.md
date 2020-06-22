@@ -5,7 +5,7 @@
 ### Introduce
 * Daily/Weekly BoxOffice
 * Movie Info
-* Company Info
+* Search Movie
 
 ### Project Stack
 * React
