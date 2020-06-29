@@ -6,7 +6,7 @@ import {
   ShowtypeType,
   CompanyType,
   AuditType,
-} from "../../modules/movieInfo/types";
+} from "../../modules/movieInfo";
 
 import Actors from "./Info/Actors";
 import ShowTypes from "./Info/ShowTypes";

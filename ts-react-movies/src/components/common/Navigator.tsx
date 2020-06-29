@@ -55,11 +55,6 @@ const Navigator: React.FC<NavigatorProps> = (props) => {
             영화정보
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/cast" activeStyle={{ color: "white" }}>
-            영화인
-          </NavLink>
-        </li>
       </ul>
     </NavItem>
   );
